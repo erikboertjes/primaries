@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Republican Primaries 2016</title>
+<link rel="stylesheet" type="text/css" href="css/primaries.css"/>
+</head>
+<body>
+<div id="main"></div>
+<div id="title"><b>Cruz</b> could have been in the lead</div>
+<div id="subtitle">The Republicans have many different voting systems: each state has its own system of
+dividing delegates over candidates. This visualization allows to experiment with the
+various systems. What would happen if the Republicans would vote proportionally? And what if all states would follow the 'Winner Take All' system? Results are shown up to the point where Cruz and Kasich withdrew from the race.
+<i>Data from <a href="http://realclearpolitics.com" target="_new">realclearpolitics</a>,
+created for <a href="http://www.majorleaguedatachallenge.com" target="_new">Major League Data Challenge</a>
+by <a href="http://www.bloomingdata.com" target="_new">Erik Boertjes</a>
+with <a href="http://d3js.org" target="_new">D3</a>.</i></br></br></div>
+<div id="infoPanelDIV"></div>
+
+
+<script src="lib/d3.min.js"></script>
+<script src="lib/jquery-2.2.1.min.js"></script>
+<script src="lib/jquery-ui-1.11.4.min.js"></script>
+
+<!--
+<script src="js/data.min.js"></script>
+<script src="js/size.min.js"></script>
+<script src="js/infoPanel.min.js"></script>
+<script src="js/buttons.min.js"></script>
+<script src="js/util.min.js"></script>
+<script src="js/visualize.min.js"></script>
+-->
+
+<script src="js/data.js"></script>
+<script src="js/size.js"></script>
+<script src="js/infoPanel.js"></script>
+<script src="js/buttons.js"></script>
+<script src="js/util.js"></script>
+<script src="js/visualize.js"></script>
+
+<script>
+
+var CHART_BASE_X = 490;
+var CHART_BASE_Y = 405;
+var CHART_BAR_SPACING = 330;
+var CHART_BAR_WIDTH = 30;
+
+var STATE_HEIGHT = 20;
+var STATE_Y = 593;
+var STATE_GAP_WIDTH = 1;
+
+var LAYING_BAR_HEIGHT = 10;
+var GAP_BARS_HOR  = 10;
+var GAP_BARS_VERT = 10;
+
+var STRIP_HEIGHT = 10; //strip just above the states bar
+
+var MIN_SIZE = 1;
+var SCALE_FACTOR_STATE  = 0.68;
+var SCALE_FACTOR_STANDING_BAR = 0.25;
+var SCALE_FACTOR_LAYING_BAR = 0.29;
+
+//var CANDIDATE_GAP_WIDTH_STANDING = 0;
+var CANDIDATE_GAP_WIDTH_LAYING = 1;
+var CANDIDATE_GAP_WIDTH_STATE = 0;
+
+var GAP_CONNECTION_AND_STATE        = 2;
+var GAP_CONNECTION_AND_STANDING_BAR = 0;
+var GAP_CONNECTION_AND_LAYING_BAR   = 0;
+
+var IMAGE_SIZE = 30;
+
+var STATE_COLOR = "#333333";
+var HIGHLIGHT_COLOR = "#ffcc00";
+
+//var selectedScenario;
+var selectedSortCriterium;
+var selectedState = null;
+var selectedCandidate = null;
+var selectedStory = stories[0];
+
+//create svg where data will be plotted
+var svg = d3.select("#main")
+	.append("svg")
+	.attr("width",1350)
+	.attr("height",750);
+	//.style("display","block")
+	//.style("margin","auto");
+
+//load data
+console.log("loading data");
+loadData(function() {
+	console.log("loaded data"); //,"states",states,"votes",votes);
+	setScenarioForStates(selectedStory);
+	selectedSortCriterium = sortCriteria[0].id;
+	sortStates(selectedSortCriterium);
+	//initInfoPanels();
+	initButtons();
+	visualize();
+})
+
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+</script>
+
+</body>
+</html>

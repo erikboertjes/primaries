@@ -1,0 +1,150 @@
+
+	#title {
+		position:absolute;
+		top: 20px;
+		widht: 650px;
+		left: 570; /* 20px; */
+		font-family: Tahoma, sans-serif;
+		font-size: 28pt;
+	}
+	
+	#subtitle {
+		position:absolute;
+		top: 80; /* 25px; */
+		width: 690px;
+		left:575px;
+		font-family: Tahoma, sans-serif;
+		font-size: 9pt;
+		text-align: justify;
+	}
+	
+	a {
+		color: black;
+	}
+	
+	text {
+		-webkit-user-select: none; /* make svg text non-selectable */
+		cursor: default;
+	}
+	.delegatesCount {
+		font-family: Tahoma, sans-serif;
+		font-size: 12pt;
+		fill: #000000;
+	}
+	
+	.candidateName {
+		font-family: Tahoma, sans-serif;
+		font-size: 10pt;
+		font-weight: bold;
+		fill: #000000;
+	}
+	
+	.stateAbbreviation {
+		font-family: Tahoma, sans-serif;
+		font-size: 7pt;
+	}
+	
+	.stateVotingSystemAbbreviation {
+		font-family: Tahoma, sans-serif;
+		font-size: 7pt;
+	}
+	
+	.connectionLower {
+		opacity: 0.5;
+	}
+	
+	.highlightedUpperConnection {
+		opacity: 0.5;
+	}
+	
+	.infoPanelBackground {
+		fill: #fefefe;
+		stroke: #eeeeee;
+		stroke-width: 1;
+		opacity: 0.8;
+	}
+	
+	#stateInfoPanelStateName {
+		font-family: Tahoma, sans-serif;
+		font-size: 10pt;
+		font-weight: bold;
+	}
+	
+	.stateInfoPanelScenarioLabel {
+		font-family: Tahoma, sans-serif;
+		font-size: 7pt;
+	}
+	
+	.stateInfoPanelCandidateLabel {
+		font-family: Tahoma, sans-serif;
+		font-size: 10pt;
+	}
+	
+	.stateInfoPanelDelegateCount {
+		font-family: Tahoma, sans-serif;
+		font-size: 10pt;
+	}
+	
+	.stateInfoPanelVotingSystemDescription {
+		font-family: Tahoma, sans-serif;
+		font-size: 8pt;
+	}
+	
+	#candidateInfoPanelCandidateName {
+		font-family: Tahoma, sans-serif;
+		font-size: 10pt;
+		font-weight: bold;
+	}
+	
+	.candidateInfoPanelScenarioLabel {
+		font-family: Tahoma, sans-serif;
+		font-size: 7pt;
+	}
+	
+	.candidateInfoPanelStateLabel {
+		font-family: Tahoma, sans-serif;
+		font-size: 10pt;
+	}
+	
+	.candidateInfoPanelDelegateCount {
+		font-family: Tahoma, sans-serif;
+		font-size: 10pt;
+	}
+	
+	.buttonHeading {
+		font-family: Tahoma, sans-serif;
+		font-size: 10pt;
+		font-weight: bold;
+	}
+	
+	.buttonSubHeading {
+		font-family: Tahoma, sans-serif;
+		font-size: 8pt;
+	}
+	
+	.buttonLabel {
+		font-family: Tahoma, sans-serif;
+		font-size: 9pt;
+	}
+	
+	.explanationLine {
+		font-family: Tahoma, sans-serif;
+		font-size: 9pt;
+	}
+	
+	.nrOfStatesInfo {
+		font-family: Tahoma, sans-serif;
+		font-size: 8pt;
+	}
+	
+	.tickMarkLine {
+		stroke-width: 1;
+		stroke: #000000;
+	}
+	
+	.tickMarkText {
+		font-family: Tahoma, sans-serif;
+		font-size: 7pt;
+	}
+
+	
